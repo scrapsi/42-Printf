@@ -6,13 +6,13 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:53:26 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:56:06 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/19 14:58:46 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_has_format(const char *str)
+int	ft_has_format(const char *str)
 {
 	int	i;
 

@@ -6,29 +6,12 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 10:25:11 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:55:46 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/19 14:58:02 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
-int	ft_parse(va_list args, const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == '%' && str[i + 1])
-		{
-		}
-		else
-			ft_putchar_fd(str[i], 1);
-		i++;
-	}
-	return (i);
-}
 
 int	ft_printf(const char *str, ...)
 {
