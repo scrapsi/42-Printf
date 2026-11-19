@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/18 11:31:30 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/18 14:40:00 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/09 13:58:54 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/19 11:08:11 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdio.h>
+#include <unistd.h>
 
-void print(int n, ...) {
-    va_list args;
-	int i;
-    va_start(args, n);  
-    while(i < n)
-	{ 
-        printf("%d ", va_arg(args, int));
-		i++;
-	}
-	printf("\n");
-    va_end(args);
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }
-int main() {
-  
-  	// Calling function print() with different number
-  	// of arguments
-    print(3, 1, 2, 3);
-    print(5, 1, 2, 3, 4, 5);
-  
-    return 0;
-}
+
+/* int main (void)
+{
+	ft_putchar_fd('1', 1);
+
+	ft_putchar_fd('0', 0);
+
+	ft_putchar_fd('2', 2);
+
+	ft_putchar_fd('3', 3);
+
+	return (0);
+} */

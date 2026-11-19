@@ -3,7 +3,7 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-LIBC = 
+LIBC = ft_printf.c
 
 SRCS = $(LIBC) $(ADDITIONAL) $(LIST)
 
