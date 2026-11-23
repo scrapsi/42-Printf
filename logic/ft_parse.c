@@ -14,8 +14,8 @@
 
 int	ft_parse(va_list args, const char *str)
 {
-	int		i;
-	int		len;
+	int	i;
+	int	len;
 
 	i = 0;
 	len = 0;
