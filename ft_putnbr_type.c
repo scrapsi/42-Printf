@@ -6,17 +6,17 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 15:18:40 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:18:41 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:52:21 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_type(int n, int fd, int type)
+void	ft_putnbr_type(int n, int fd, char type)
 {
 	long	nb;
 
-	if (type == 1)
+	if (type == 'u')
 		nb = (unsigned int)n;
 	else
 	{
