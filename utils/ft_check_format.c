@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_parse.c                                         :+:      :+:    :+:   */
+/*   ft_check_format.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:22 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:18:33 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:06 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
-int	ft_parse(va_list args, const char *str)
+int	ft_check_format(char format)
 {
+	char	*conversion;
 	int		i;
-	int		len;
-	char	*current;
 
+	conversion = "cspdiuxX%";
 	i = 0;
-	len = 0;
-	while (str[i])
+	while (conversion[i])
 	{
-		if (str[i] == '%' && ft_check_format(str[i++]) == 1)
-			len += ft_conversion(args, str[i]);
-		else
-			len += ft_putchar_len(str[i], 1);
+		if (conversion[i] == format)
+			return (1);
 		i++;
 	}
-	return (len);
+	return (0);
 }

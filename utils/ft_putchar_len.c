@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_type.c                                   :+:      :+:    :+:   */
+/*   ft_putchar_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:33 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:18:52 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:30 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
-int	ft_putnbr_type(int n, int fd, char type)
+int	ft_putchar_len(char c, int fd)
 {
-	long	nb;
-	int		len;
-
-	len = 0;
-	if (type == 'u')
-		nb = (unsigned int)n;
-	else
-	{
-		nb = n;
-		if (nb < 0)
-		{
-			len += ft_putchar_len('-', fd);
-			nb = -nb;
-		}
-	}
-	if (nb > 9)
-		len += ft_putnbr_type(nb / 10, fd, 'd');
-	len += ft_putchar_len((nb % 10) + '0', fd);
-	return (len);
+	write(fd, &c, 1);
+	return (1);
 }

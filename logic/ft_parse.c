@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_len.c                                   :+:      :+:    :+:   */
+/*   ft_parse.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:30 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:09:30 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:22 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../header/ft_printf.h"
 
-int	ft_putchar_len(char c, int fd)
+int	ft_parse(va_list args, const char *str)
 {
-	write(fd, &c, 1);
-	return (1);
+	int		i;
+	int		len;
+
+	i = 0;
+	len = 0;
+	while (str[i])
+	{
+		if (str[i] == '%' && ft_check_format(str[i++]) == 1)
+			len += ft_conversion(args, str[i]);
+		else
+			len += ft_putchar_len(str[i], 1);
+		i++;
+	}
+	return (len);
 }

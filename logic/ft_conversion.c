@@ -6,11 +6,11 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:13 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:14:49 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 16:40:44 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
 int	ft_conversion(va_list args, char format)
 {

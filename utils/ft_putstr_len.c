@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_has_format.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_len.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:16 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:09:16 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:37 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
-int	ft_has_format(const char *str)
+int	ft_putstr_len(const char *str, int fd)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (str[i])
+	len = 0;
+	if (!str)
+		return (0);
+	while (str[len])
 	{
-		if (str[i] == '%')
-			return (1);
-		i++;
+		ft_putchar_len(str[len], fd);
+		len++;
 	}
-	return (0);
+	return (len);
 }

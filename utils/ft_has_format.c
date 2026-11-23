@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_format.c                                  :+:      :+:    :+:   */
+/*   ft_has_format.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:06 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:09:07 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:16 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
-int	ft_check_format(char format)
+int	ft_has_format(const char *str)
 {
-	char	*conversion;
-	int		i;
+	int	i;
 
-	conversion = "cspdiuxX%";
 	i = 0;
-	while (conversion[i])
+	while (str[i])
 	{
-		if (conversion[i] == format)
+		if (str[i] == '%')
 			return (1);
 		i++;
 	}

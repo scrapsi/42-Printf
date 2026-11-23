@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_hex_type.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:25 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:20:06 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:19 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../header/ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+int	ft_hex_type(int n, char type)
 {
-	va_list	args;
+	char	*base;
 	int		len;
 
 	len = 0;
-	va_start(args, str);
-	if (!ft_has_format(str))
-		len = ft_putstr_len(str, 1);
-	else
-		len = ft_parse(args, str);
-	va_end(args);
+	if (type == 'l')
+		base = "0123456789abcdef";
+	if (type == 'u')
+		base = "0123456789ABCDEF";
+	if (n >= 16)
+		len += ft_hex_type(n / 16, type);
+	len += ft_putchar_len(base[n % 16], 1);
 	return (len);
-}
-
-int	main(void)
-{
-	ft_printf("%d", ft_printf("%c, %c, %c, %c%x", 'c', 'c', 'c', 'c', 255));
-	ft_printf("\n");
-	printf("%d", printf("%c, %c, %c, %c%x", 'c', 'c', 'c', 'c', 255));
-	return (0);
 }
