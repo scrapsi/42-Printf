@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/19 17:35:18 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:55:39 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:13 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:14:49 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 int	ft_conversion(va_list args, char format)
 {
+	int	len;
+
+	len = 0;
 	if (format == 'c')
-		ft_putchar_fd((char)va_arg(args, int), 1);
+		len += ft_putchar_len((char)va_arg(args, int), 1);
 	if (format == 's')
-		ft_putstr_fd(va_arg(args, char *), 1);
+		len += ft_putstr_len(va_arg(args, char *), 1);
 	// if (format == 'p')
 	//{
 	//}
 	if (format == 'd' || format == 'i')
-		ft_putnbr_type(va_arg(args, int), 1, 's');
+		len += ft_putnbr_type(va_arg(args, int), 1, 's');
 	if (format == 'u')
-		ft_putnbr_type(va_arg(args, int), 1, 'u');
+		len += ft_putnbr_type(va_arg(args, int), 1, 'u');
 	if (format == 'x')
-		ft_hex_type(va_arg(args, int), 'l');
+		len += ft_hex_type(va_arg(args, int), 'l');
 	if (format == 'X')
-		ft_hex_type(va_arg(args, int), 'u');
+		len += ft_hex_type(va_arg(args, int), 'u');
 	if (format == '%')
-		ft_putchar_fd('%', 1);
-	return (0);
+		len += ft_putchar_len('%', 1);
+	return (len);
 }

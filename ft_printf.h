@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:35:47 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:51:40 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 16:12:33 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 # include <unistd.h>
 
 size_t	ft_strlen(const char *s);
-void	ft_putchar_fd(char c, int fd);
-int		ft_has_format(const char *str);
-int		ft_putstr_len(const char *str);
-int		ft_parse(va_list args, const char *str);
 int		ft_check_format(char format);
-int		ft_conversion(va_list, char format);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_type(int n, int fd, char type);
+int		ft_conversion(va_list args, char format);
+int		ft_has_format(const char *str);
 int		ft_hex_type(int n, char type);
+int		ft_parse(va_list args, const char *str);
+int		ft_printf(const char *str, ...);
+int		ft_putchar_len(char c, int fd);
+int		ft_putnbr_type(int n, int fd, char type);
+int		ft_putstr_len(const char *str, int fd);
 
 #endif

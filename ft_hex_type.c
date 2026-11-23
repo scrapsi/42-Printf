@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 15:49:01 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:52:35 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/23 16:09:19 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/23 16:13:13 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 int	ft_hex_type(int n, char type)
 {
 	char	*base;
+	int		len;
 
+	len = 0;
 	if (type == 'l')
 		base = "0123456789abcdef";
 	if (type == 'u')
 		base = "0123456789ABCDEF";
 	if (n >= 16)
-		ft_hex_type(n / 16, type);
-	ft_putchar_fd(base[n % 16], 1);
-	return (0);
+		len += ft_hex_type(n / 16, type);
+	len += ft_putchar_len(base[n % 16], 1);
+	return (len);
 }
