@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:53:43 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:27:56 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:54:42 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_parse(va_list args, const char *str)
 {
 	int i;
 	int len;
+	char *current;
 
 	i = 0;
 	len = 0;

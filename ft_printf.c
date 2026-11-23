@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 10:25:11 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 15:51:10 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:55:17 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_printf(const char *str, ...)
 int	main(void)
 {
 	printf("printf :{%x}", 255);
-	ft_printf("test%dtest", 255);
+	ft_printf("%c%c%c%c", 't', 'e', 's', 't');
 	return (0);
 }
