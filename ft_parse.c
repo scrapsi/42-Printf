@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:53:43 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 14:17:02 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:29:32 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ int	ft_parse(va_list args, const char *str)
 	{
 		if (str[i] == '%' && ft_check_format(str[i + 1]) == 1)
 		{
-			printf("\nfound : {%c} at index : {%d}\n", str[i + 1], i);
+			// printf("\nfound : {%c} at index : {%d}\n", str[i + 1], i);
 			ft_conversion(args, str[i + 1]);
+			i++;
 		}
 		else
 		{

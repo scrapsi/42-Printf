@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 10:25:11 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 11:40:42 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:40:54 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	printf("return: %d", ft_printf("coucou: &d", 42));
+	ft_printf("test%ctest", 4);
 	return (0);
 }
