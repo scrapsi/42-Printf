@@ -6,13 +6,13 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:35:18 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 18:02:52 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:16:16 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_conversion(va_list, char *str, char format)
+int	ft_conversion(va_list args, char format)
 {
 	if (format == 'c')
 	{
@@ -41,4 +41,5 @@ int	ft_conversion(va_list, char *str, char format)
 	if (format == '%')
 	{
 	}
+	return (0);
 }

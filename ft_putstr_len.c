@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 14:53:10 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:58:32 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 11:35:34 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_putstr_len(const char *str)
 {
-	int	i;
+	int	len;
 
-	i = 0;
+	len = 0;
 	if (!str)
 		return (0);
-	while (str[i])
+	while (str[len])
 	{
-		ft_putchar_fd(str[i], 1);
-		i++;
+		ft_putchar_fd(str[len], 1);
+		len++;
 	}
-	return (i);
+	return (len);
 }

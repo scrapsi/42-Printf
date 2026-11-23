@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:35:47 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:58:08 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 14:17:00 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ void	ft_putchar_fd(char c, int fd);
 int		ft_has_format(const char *str);
 int		ft_putstr_len(const char *str);
 int		ft_parse(va_list args, const char *str);
+int		ft_check_format(char format);
+int		ft_conversion(va_list, char format);
 
 #endif

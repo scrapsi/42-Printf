@@ -6,12 +6,11 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 10:25:11 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:58:02 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 11:40:42 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_printf(const char *str, ...)
 {
@@ -30,6 +29,6 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	printf("ft_printf : {%d}\n", ft_printf("qwuidy%uquydyuqw"));
+	printf("return: %d", ft_printf("coucou: &d", 42));
 	return (0);
 }
