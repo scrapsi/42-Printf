@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:12:03 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/19 14:59:15 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:08:11 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-
-/* #include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char *src;
-
-	src = "Hello, World!";
-	printf("ft_strlen(src) : {%zu}\n", ft_strlen(src));
-	printf("strlen(src)    : {%zu}\n", strlen(src));
-
-	return (0);
-} */

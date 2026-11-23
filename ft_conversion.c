@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:35:18 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 14:38:42 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:40:00 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,21 @@ int	ft_conversion(va_list args, char format)
 {
 	if (format == 'c')
 		ft_putchar_fd((char)va_arg(args, int), 1);
-	// if (format == 's')
-	//{
-	//}
+	if (format == 's')
+		ft_putstr_fd(va_arg(args, char *), 1);
 	// if (format == 'p')
 	//{
 	//}
-	// if (format == 'd')
-	//{
-	//}
-	// if (format == 'i')
-	//{
-	//}
-	// if (format == 'u')
-	//{
-	//}
-	// if (format == 'x')
-	//{
-	//}
+	if (format == 'd' || format == 'i')
+		ft_putnbr_type(va_arg(args, int), 1, 0);
+	if (format == 'u')
+		ft_putnbr_type(va_arg(args, int), 1, 1);
+	if (format == 'x')
+		ft_hex(va_arg(args, int));
 	// if (format == 'X')
 	//{
 	//}
-	// if (format == '%')
-	//{
-	//}
+	if (format == '%')
+		ft_putchar_fd('%', 1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:35:47 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 14:17:00 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/23 15:39:17 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ int		ft_putstr_len(const char *str);
 int		ft_parse(va_list args, const char *str);
 int		ft_check_format(char format);
 int		ft_conversion(va_list, char format);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_type(int n, int fd, int type);
+int		ft_hex(int n);
 
 #endif
