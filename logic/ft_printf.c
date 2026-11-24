@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:25 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 11:39:36 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:57:28 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_printf(const char *str, ...)
 
 	len = 0;
 	va_start(args, str);
+	if (!str)
+		return (-1);
 	if (!ft_has_percent(str))
 		len = ft_putstr(str);
 	else
