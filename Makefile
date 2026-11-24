@@ -6,14 +6,14 @@
 #    By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/24 09:50:06 by baantoin          #+#    #+#              #
-#    Updated: 2026/11/24 11:22:23 by baantoin         ###   ########.fr        #
+#    Updated: 2026/11/24 14:11:26 by baantoin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I header
+CFLAGS = -Wall -Wextra -Werror
 
 LOGIC_SRCS = logic/ft_printf.c \
              logic/ft_parse.c \
