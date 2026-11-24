@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:25 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 11:57:28 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 12:38:02 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
-/* int	main(void)
-{
-
-	printf("\nvalue : %d\n", ft_printf("me : %s", NULL));
-	return (0);
-} */
