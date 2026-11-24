@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 09:24:01 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:47:40 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 09:55:47 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_putptr(void *ptr)
 {
-	char	*adresse;
-	int		i;
+	unsigned char	*adresse;
+	int				i;
 
+	adresse = (unsigned char *)ptr;
 	i = 0;
 	while (adresse[i])
 	{

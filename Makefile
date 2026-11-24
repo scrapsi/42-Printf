@@ -1,22 +1,43 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/11/24 09:50:06 by baantoin          #+#    #+#              #
+#    Updated: 2026/11/24 09:53:11 by baantoin         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libftprintf.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I header
 
-SRCS = logic/ft_printf.c logic/ft_parse.c logic/ft_conversion.c \
-       utils/ft_check_format.c utils/ft_has_percent.c \
-       utils/ft_puthex.c utils/ft_putchar.c \
-       utils/ft_putnbr.c utils/ft_putstr.c
+LOGIC_SRCS = logic/ft_printf.c \
+             logic/ft_parse.c \
+             logic/ft_conversion.c
 
+UTILS_SRCS = utils/ft_is_valid_conversion.c \
+             utils/ft_has_percent.c \
+             utils/ft_putchar.c \
+             utils/ft_putstr.c \
+             utils/ft_putnbr_signed.c \
+             utils/ft_putnbr_unsigned.c \
+             utils/ft_puthex.c \
+             utils/ft_putptr.c
 
-OBJS = $(SRCS:.c=.o)
+LOGIC_OBJS = $(LOGIC_SRCS:.c=.o)
+UTILS_OBJS = $(UTILS_SRCS:.c=.o)
+OBJS = $(LOGIC_OBJS) $(UTILS_OBJS)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c ft_printf.h
+%.o: %.c header/ft_printf.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
