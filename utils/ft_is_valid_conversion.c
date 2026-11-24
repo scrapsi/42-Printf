@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 09:27:02 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:47:26 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 10:01:47 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_is_valid_conversion(char format)
 {
-	char	*conversion;
-	int		i;
+	const char	*conversion;
+	int			i;
 
 	conversion = "cspdiuxX%";
 	i = 0;
