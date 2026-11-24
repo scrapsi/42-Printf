@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_len.c                                   :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:30 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:23:51 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:38:14 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_putchar_len(char c, int fd)
+int	ft_putchar(char c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
 	return (1);
 }

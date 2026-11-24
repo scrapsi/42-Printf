@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_len.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:37 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:44:23 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:44:29 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_putstr_len(const char *str, int fd)
+int	ft_putnbr_unsigned(unsigned int n)
 {
-	int	len;
+	long	l_n;
+	int		len;
 
 	len = 0;
-	if (!str)
-		return (0);
-	while (str[len])
-	{
-		ft_putchar_len(str[len], fd);
-		len++;
-	}
+	if (l_n > 9)
+		len += ft_putnbr(l_n / 10);
+	len += ft_putchar((l_n % 10) + '0');
 	return (len);
 }

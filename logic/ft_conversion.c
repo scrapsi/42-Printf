@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:13 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:54:45 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 09:41:00 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ int	ft_conversion(va_list args, char format)
 
 	len = 0;
 	if (format == 'c')
-		len += ft_putchar_len((char)va_arg(args, int), 1);
+		len += ft_putchar((char)va_arg(args, int));
 	if (format == 's')
-		len += ft_putstr_len(va_arg(args, char *), 1);
+		len += ft_putstr(va_arg(args, char *));
 	if (format == 'p')
-		len += ft_pointer(va_arg(args, void *));
+		len += ft_putptr(va_arg(args, void *));
 	if (format == 'd' || format == 'i')
-		len += ft_putnbr_type(va_arg(args, int), 1, 's');
+		len += ft_putnbr(va_arg(args, int));
 	if (format == 'u')
-		len += ft_putnbr_type(va_arg(args, int), 1, 'u');
+		len += ft_putnbr(va_arg(args, int));
 	if (format == 'x')
-		len += ft_hex_type(va_arg(args, int), 'l');
+		len += ft_puthex(va_arg(args, int), "0123456789abcdef");
 	if (format == 'X')
-		len += ft_hex_type(va_arg(args, int), 'u');
+		len += ft_puthex(va_arg(args, int), "0123456789ABCDEF");
 	if (format == '%')
-		len += ft_putchar_len('%', 1);
+		len += ft_putchar('%');
 	return (len);
 }

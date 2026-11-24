@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_has_format.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:16 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:24:04 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:40:14 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_has_format(const char *str)
+int	ft_putstr(const char *str)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (str[i])
+	len = 0;
+	if (!str)
+		return (0);
+	while (str[len])
 	{
-		if (str[i] == '%')
-			return (1);
-		i++;
+		ft_putchar(str[len]);
+		len++;
 	}
-	return (0);
+	return (len);
 }

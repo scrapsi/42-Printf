@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pointer.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_signed.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:45:09 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 17:02:35 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:23:57 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:43:36 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_pointer(void *content)
+int	ft_putnbr_signed(int n)
 {
-	int		i;
-	char	*adresse;
+	long	l_n;
+	int		len;
 
-	i = 0;
-	while (adresse[i])
+	len = 0;
+	if (l_n < 0)
 	{
-		write(1, &adresse[i], 1	);
-		i++;
+		len += ft_putchar('-');
+		l_n = -l_n;
 	}
-	return (i);
+	if (l_n > 9)
+		len += ft_putnbr(l_n / 10);
+	len += ft_putchar((l_n % 10) + '0');
+	return (len);
 }

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_type.c                                      :+:      :+:    :+:   */
+/*   ft_has_percent.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:19 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:27:59 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:35:29 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_hex_type(int n, char type)
+int	ft_has_percent(const char *str)
 {
-	char	*base;
-	int		len;
+	int	i;
 
-	len = 0;
-	if (type == 'l')
-		base = "0123456789abcdef";
-	if (type == 'u')
-		base = "0123456789ABCDEF";
-	if (n >= 16)
-		len += ft_hex_type(n / 16, type);
-	len += ft_putchar_len(base[n % 16], 1);
-	return (len);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == '%')
+			return (1);
+		i++;
+	}
+	return (0);
 }

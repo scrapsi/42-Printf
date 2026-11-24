@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_format.c                                  :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:06 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:23:54 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:42:31 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_check_format(char format)
+int	ft_puthex(unsigned long n, const char *base)
 {
-	char	*conversion;
-	int		i;
 
-	conversion = "cspdiuxX%";
-	i = 0;
-	while (conversion[i])
-	{
-		if (conversion[i] == format)
-			return (1);
-		i++;
-	}
-	return (0);
+	int		len;
+
+	len = 0;
+	if (n >= 16)
+		len += ft_puthex(n / 16, base);
+	len += ft_putchar(base[n % 16]);
+	return (len);
 }

@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_type.c                                   :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/23 16:09:33 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/23 16:40:32 by baantoin         ###   ########.fr       */
+/*   Created: 2026/11/24 09:24:01 by baantoin          #+#    #+#             */
+/*   Updated: 2026/11/24 09:39:11 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int	ft_putnbr_type(int n, int fd, char type)
+int ft_putptr(void *ptr)
 {
-	long	nb;
-	int		len;
+	int		i;
+	char	*adresse;
 
-	len = 0;
-	if (type == 'u')
-		nb = (unsigned int)n;
-	else
+	i = 0;
+	while (adresse[i])
 	{
-		nb = n;
-		if (nb < 0)
-		{
-			len += ft_putchar_len('-', fd);
-			nb = -nb;
-		}
+		write(1, &adresse[i], 1);
+		i++;
 	}
-	if (nb > 9)
-		len += ft_putnbr_type(nb / 10, fd, 'd');
-	len += ft_putchar_len((nb % 10) + '0', fd);
-	return (len);
+	return (i);
 }
