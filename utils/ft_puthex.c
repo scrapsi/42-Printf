@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 09:23:54 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:42:31 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 09:46:29 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_puthex(unsigned long n, const char *base)
 {
-
-	int		len;
+	int	len;
 
 	len = 0;
 	if (n >= 16)

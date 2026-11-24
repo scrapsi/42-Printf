@@ -6,16 +6,16 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 09:24:01 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:39:11 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 09:47:40 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/ft_printf.h"
 
-int ft_putptr(void *ptr)
+int	ft_putptr(void *ptr)
 {
-	int		i;
 	char	*adresse;
+	int		i;
 
 	i = 0;
 	while (adresse[i])

@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:13 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:41:00 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 09:48:05 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_conversion(va_list args, char format)
 {
-	int		len;
-	void	*current;
+	int	len;
 
 	len = 0;
 	if (format == 'c')
