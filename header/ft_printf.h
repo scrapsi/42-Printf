@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:35:47 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 11:20:31 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:30:26 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	ft_has_percent(const char *str);
 int	ft_putchar(char c);
 int	ft_putstr(const char *str);
 int	ft_putnbr_signed(long int n);
-int	ft_putnbr_base_signed(long int n, const char *base);
-int	ft_putnbr_base_unsigned(unsigned long int n, const char *base);
+int	ft_putnbr_base_s(long int n, const char *base);
+int	ft_putnbr_base_u(unsigned long int n, const char *base);
 int	ft_putptr(void *ptr);
 int	ft_strlen(const char *s);
 

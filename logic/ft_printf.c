@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:25 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 10:57:40 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:27:19 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
+/*
 int	main(void)
 {
 	int	number;
@@ -37,4 +38,4 @@ int	main(void)
 	ft_printf("me :%p\n", &number);
 	printf("p  :%p", &number);
 	return (0);
-}
+} */

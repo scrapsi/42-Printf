@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:12:03 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 11:02:26 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:30:58 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlen(const char *s)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (!s)
