@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:25 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 10:00:12 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 10:57:40 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,7 @@ int	main(void)
 
 	number = 42;
 	ptr = &number;
-	ft_printf("%d", ft_printf("%c, %c, %c, %c %p", 'c', 'c', 'c', 'c',
-			&number));
-	ft_printf("\n");
+	ft_printf("me :%p\n", &number);
+	printf("p  :%p", &number);
 	return (0);
 }

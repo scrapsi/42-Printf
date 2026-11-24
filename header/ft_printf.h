@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:35:47 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:50:41 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:20:31 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stdio.h> //delete
 # include <unistd.h>
 
 int	ft_printf(const char *str, ...);
@@ -23,9 +24,10 @@ int	ft_is_valid_conversion(char format);
 int	ft_has_percent(const char *str);
 int	ft_putchar(char c);
 int	ft_putstr(const char *str);
-int	ft_putnbr_signed(int n);
-int	ft_putnbr_unsigned(unsigned int n);
-int	ft_puthex(unsigned long n, const char *base);
+int	ft_putnbr_signed(long int n);
+int	ft_putnbr_base_signed(long int n, const char *base);
+int	ft_putnbr_base_unsigned(unsigned long int n, const char *base);
 int	ft_putptr(void *ptr);
+int	ft_strlen(const char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:13 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 09:54:01 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 11:19:46 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,15 @@ int	ft_conversion(va_list args, char format)
 	else if (format == 'p')
 		len += ft_putptr(va_arg(args, void *));
 	else if (format == 'd' || format == 'i')
-		len += ft_putnbr_signed(va_arg(args, int));
+		len += ft_putnbr_base_signed(va_arg(args, int), "0123456789");
 	else if (format == 'u')
-		len += ft_putnbr_unsigned(va_arg(args, unsigned int));
+		len += ft_putnbr_base_unsigned(va_arg(args, unsigned int),
+				"0123456789");
 	else if (format == 'x')
-		len += ft_puthex(va_arg(args, unsigned int), "0123456789abcdef");
+		len += ft_putnbr_base_unsigned(va_arg(args, int), "0123456789abcdef");
 	else if (format == 'X')
-		len += ft_puthex(va_arg(args, unsigned int), "0123456789ABCDEF");
+		len += ft_putnbr_base_unsigned(va_arg(args, unsigned int),
+				"0123456789ABCDEF");
 	else if (format == '%')
 		len += ft_putchar('%');
 	return (len);

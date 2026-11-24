@@ -6,7 +6,7 @@
 #    By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/24 09:50:06 by baantoin          #+#    #+#              #
-#    Updated: 2026/11/24 09:53:11 by baantoin         ###   ########.fr        #
+#    Updated: 2026/11/24 11:05:29 by baantoin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ UTILS_SRCS = utils/ft_is_valid_conversion.c \
              utils/ft_putstr.c \
              utils/ft_putnbr_signed.c \
              utils/ft_putnbr_unsigned.c \
-             utils/ft_puthex.c \
+             utils/ft_putnbr_base.c \
              utils/ft_putptr.c
 
 LOGIC_OBJS = $(LOGIC_SRCS:.c=.o)
