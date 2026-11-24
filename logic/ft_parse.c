@@ -6,7 +6,7 @@
 /*   By: baantoin <baantoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/23 16:09:22 by baantoin          #+#    #+#             */
-/*   Updated: 2026/11/24 12:17:40 by baantoin         ###   ########.fr       */
+/*   Updated: 2026/11/24 13:37:18 by baantoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_parse(va_list args, const char *str)
 	len = 0;
 	while (str[i])
 	{
-		if (str[i] == '%' && str[i + 1] == 0)
+		if (str[i] == '%' && str[i + 1] == '\0')
 			return (-1);
 		if (str[i] == '%' && str[i + 1] && ft_is_valid_conversion(str[i + 1]))
 		{
